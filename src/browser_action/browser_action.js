@@ -4,11 +4,6 @@ chrome.tabs.getSelected(function (tab) {
   $("#post-title").val(tab.title);
 });
 
-/*底部友情链接*/
-$(".footer  a").on("click", function () {
-  chrome.tabs.create({url: $(this).attr("href")});
-});
-
 /*获取子社区分类*/
 $.ajax({
   url: 'http://geek.csdn.net/service/news/categories',
@@ -23,11 +18,6 @@ $.ajax({
   }
 });
 
-/*弹窗切换*/
-function hide() {
-  $(".pop-title").hide();
-  $("form").hide();
-}
 /*获取cookies*/
 function getCookies(domain, name, callback) {
   chrome.cookies.get({"url": domain, "name": name}, function (cookie) {
@@ -69,4 +59,15 @@ $("#post").on("click", function () {
     })
   }
 
+});
+
+/*弹窗切换*/
+function hide() {
+  $(".pop-title").hide();
+  $("form").hide();
+}
+
+/*底部友情链接*/
+$(".footer  a").on("click", function () {
+  chrome.tabs.create({url: $(this).attr("href")});
 });

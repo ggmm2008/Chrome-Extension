@@ -1,18 +1,7 @@
 <!doctype html>
 <link rel="stylesheet" href="../../lib/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="../../font/iconfont.css"/>
 <style type="text/css">
-    @font-face {
-        font-family: 'iconfont';
-        src: url('http://at.alicdn.com/t/font_1441555630_8671815.eot'); /* IE9*/
-        src: url('http://at.alicdn.com/t/font_1441555630_8671815.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('http://at.alicdn.com/t/font_1441555630_8671815.woff') format('woff'), /* chrome、firefox */ url('http://at.alicdn.com/t/font_1441555630_8671815.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('http://at.alicdn.com/t/font_1441555630_8671815.svg#iconfont') format('svg'); /* iOS 4.1- */
-    }
-
-    .iconfont {
-        font-family: "iconfont";
-        font-size: 1em;
-        font-style: normal;
-        -webkit-font-smoothing: antialiased;
-    }
     .mainPopup {
         width: 400px;
     }
@@ -62,20 +51,20 @@
         <div class="form-group">
             <label for="post-title" class="col-sm-2 control-label">推荐标题:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="post-title" placeholder="请输入推荐标题">
+                <input type="text" class="form-control" id="post-title" placeholder="请输入推荐标题(必填)">
             </div>
         </div>
         <div class="form-group">
             <label for="post-reason" class="col-sm-2 control-label">推荐理由:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="post-reason" placeholder="请输入推荐理由">
+                <input type="text" class="form-control" id="post-reason" placeholder="请输入推荐理由(选填)">
             </div>
         </div>
         <div class="form-group">
             <label for="post-sort" class="col-sm-2 control-label">所属子社区:</label>
             <div class="col-sm-10">
                 <select name="post-sort" class="form-control" id="post-sort">
-                    <option value="0">请选择子社区</option>
+                    <option value="0">请选择子社区(必选)</option>
                 </select>
             </div>
         </div>
@@ -85,7 +74,7 @@
     </form>
     <div class="success">
         <h1>
-            <i class="iconfont">&#xe600;</i>
+            <i class="iconfont">&#xe603;</i>
             分享成功
         </h1>
 
@@ -93,7 +82,7 @@
     </div>
     <div class="error">
         <h1>
-            <i class="iconfont">&#xe601;</i>
+            <i class="iconfont">&#xe602;</i>
             分享失败
         </h1>
         <p class="center"></p>
