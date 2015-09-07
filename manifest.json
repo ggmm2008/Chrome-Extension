@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "发现、分享值得你关注的极客新闻。",
-  "homepage_url": "http://geek.csdn.net/",
+  "homepage_url": "https://github.com/jzhangdev/Geek-CSDN-Chrome-Extension",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",

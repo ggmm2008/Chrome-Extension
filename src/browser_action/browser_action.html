@@ -24,6 +24,10 @@
     a {
         text-decoration: none;
     }
+    p {
+        white-space: normal;
+        word-break: break-all;
+    }
     .center {
         text-align: center;
     }
@@ -69,7 +73,7 @@
         <div class="form-group">
             <label for="post-sort" class="col-sm-2 control-label">所属子社区:</label>
             <div class="col-sm-10">
-                <select name="post-sort" id="post-sort">
+                <select name="post-sort" class="form-control" id="post-sort">
                     <option value="0">请选择子社区</option>
                 </select>
             </div>
@@ -102,4 +106,5 @@
 
 
 <script src="../../lib/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="./browser_action.js"></script>
