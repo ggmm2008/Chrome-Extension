@@ -32,17 +32,23 @@ getCookies("http://geek.csdn.net", "UserName", function (UserName) {
 
 /*发送表单内容*/
 $("#post").on("click", function () {
-  if ($("#post-title").val() != null && $("#post-sort option:selected").val() != 0) {
+
+  var title = $("#post-title").val(),
+      forum_id = $("#post-sort option:selected").val(),
+      url = $("#post-url").html(),
+      desc = $("#post-reason").val();
+
+  if (title != null && forum_id != 0) {
     $.ajax({
       url: ' http://geek.csdn.net/service/news/add_edit',
       type: 'post',
       charset: 'utf-8',
       data: {
         "username": username,
-        "title": $("#post-title").val(),
-        "forum_id": $("#post-sort option:selected").val(),
-        "url": $("#post-url").html(),
-        "description": $("#post-reason").val()
+        "title": title,
+        "forum_id": forum_id,
+        "url": url,
+        "description": desc
       },
       success: function (data) {
         hide();
