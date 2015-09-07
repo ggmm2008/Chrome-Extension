@@ -29,16 +29,17 @@ function hide() {
   $("form").hide();
 }
 /*获取cookies*/
-//function getCookies(domain, name, callback) {
-//  chrome.cookies.get({"url": domain, "name": name}, function(cookie) {
-//    if(callback) {
-//      callback(cookie.value);
-//    }
-//  });
-//}
-//getCookies("http://geek.csdn.net", "UserName", function(UserName) {
-//  console.log(UserName);
-//});
+function getCookies(domain, name, callback) {
+  chrome.cookies.get({"url": domain, "name": name}, function (cookie) {
+    if (callback) {
+      callback(cookie.value);
+    }
+  });
+}
+getCookies("http://geek.csdn.net", "UserName", function (UserName) {
+  username = UserName;
+});
+
 /*发送表单内容*/
 $("#post").on("click", function () {
   if ($("#post-title").val() != null && $("#post-sort option:selected").val() != 0) {
@@ -47,13 +48,11 @@ $("#post").on("click", function () {
       type: 'post',
       charset: 'utf-8',
       data: {
-        "username": "fe_jzhang",
+        "username": username,
         "title": $("#post-title").val(),
         "forum_id": $("#post-sort option:selected").val(),
         "url": $("#post-url").html(),
         "description": $("#post-reason").val()
-
-
       },
       success: function (data) {
         hide();
@@ -68,8 +67,6 @@ $("#post").on("click", function () {
       },
 
     })
-  } else {
-
   }
 
 });
