@@ -16,7 +16,6 @@
   },
   "permissions": [
     "tabs",
-    "contentSettings",
     "cookies",
     "http://geek.csdn.net/"
   ]
