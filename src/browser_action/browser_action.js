@@ -6,7 +6,7 @@ chrome.tabs.getSelected(function (tab) {
 
 /*获取子社区分类*/
 $.ajax({
-  url: 'http://geek.csdn.net/service/news/categories',
+  url: 'http://geek.csdn.net/service/news/forums',
   type: 'get',
   dataType: 'json',
   chrset: 'utf-8',
