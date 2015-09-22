@@ -18,18 +18,6 @@ $.ajax({
   }
 });
 
-/*获取cookies*/
-function getCookies(domain, name, callback) {
-  chrome.cookies.get({"url": domain, "name": name}, function (cookie) {
-    if (callback) {
-      callback(cookie.value);
-    }
-  });
-}
-getCookies("http://geek.csdn.net", "UserName", function (UserName) {
-  username = UserName;
-});
-
 /*发送表单内容*/
 $("#post").on("click", function () {
 
@@ -40,11 +28,10 @@ $("#post").on("click", function () {
 
   if (title != null && forum_id != 0) {
     $.ajax({
-      url: ' http://geek.csdn.net/service/news/add_edit',
+      url: 'http://geek.csdn.net/service/news/add_edit',
       type: 'post',
       charset: 'utf-8',
       data: {
-        "username": username,
         "title": title,
         "forum_id": forum_id,
         "url": url,
